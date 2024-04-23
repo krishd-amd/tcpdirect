@@ -28,6 +28,10 @@ jobs:
            sudo apt install python3 python3-pip jq
            pip3 install yq
 
+      - name: hello
+        run: |
+           echo "hello world"
+
       - name: Extract TCPDirect branch name
         id: tcpdirectBranch
         run: echo "branch=$(yq -r '.products.TCPDirect.version' < $GITHUB_WORKSPACE/tcpdirect/versions.yaml)" >> "$GITHUB_OUTPUT"
