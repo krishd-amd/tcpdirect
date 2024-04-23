@@ -3,7 +3,10 @@
 
 name: "perform_build"
 
-on: push
+on:
+  push:
+  pull_request:
+    types: [opened]
 
 jobs:
   extract_branch_info:
